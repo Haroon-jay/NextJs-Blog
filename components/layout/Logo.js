@@ -3,7 +3,7 @@ import classes from "./logo.module.css"
 const Logo = () => {
     return (
         <div className={classes.logo}>
-            Haroon's Blog
+            Haroon&apos;s Blog
         </div>
     )
 }

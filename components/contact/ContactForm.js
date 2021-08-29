@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import classes from "./contact-form.module.css"
-import Notification from "../ui/notification"
+import Notification from '../ui/notification'
 const ContactForm = () => {
     const [enteredEmail,setEmail]=useState("")
     const [enteredName,setName]=useState("")
@@ -87,6 +87,7 @@ const ContactForm = () => {
                     </div>
                   
             </form>
+            
             { reqStatus && notificationData && <Notification status={notificationData.status} message={notificationData.message} title={notificationData.title} />}
         </div>
     )

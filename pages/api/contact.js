@@ -10,7 +10,7 @@ if(req.method=="POST"){
   }
   let client
   try{
-   client=await MongoClient.connect("mongodb+srv://Haroon:<password>@cluster0.5duo6.mongodb.net/my-blog?retryWrites=true&w=majority")
+   client=await MongoClient.connect(`mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.5duo6.mongodb.net/${process.env.MONGO_DB_NAME}?retryWrites=true&w=majority`)
    console.log("Connectionto Db ESTABLISHED")
   }catch(e){
    console.log(e,"Connection to Db failed")
